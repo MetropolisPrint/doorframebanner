@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesan Door Frame Banner</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      padding: 16px;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      max-width: 480px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .deskripsi {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .hint {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1ebe5d;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #d35400;
+      background: #fff6e5;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    .note b {
+      display: block;
+      font-size: 16px;
+      color: #c0392b;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <h2>Pesan "Door Frame Banner"</h2>
+      <div class="deskripsi">
+        Door Frame Banner adalah salah satu jenis alat yang digunakan sebagai penahan banner yang terbuat dari frame dan dudukan yang terbuat dari besi hollow. Selain pemakaian dan pemasangannya yang sangat mudah, alat ini juga merupakan alat penahan banner yang kokoh dan kuat karena 100% terbuat dari besi dengan frame dan dudukan yang cukup tebal. Bentuknya yang simpel dan minimalis menjadikan door frame banner menjadi atribut yang bernuansa modern. Dapat dipasang di segala ruangan masa kini, dan harganya yang cukup murah menjadikannya banyak dicari saat ini.
+      </div>
+
+      <label>Nama Anda</label>
+      <input type="text" id="nama" required>
+
+      <label>Nomor WhatsApp Anda</label>
+      <input type="tel" id="nowa" pattern="[0-9]+" required>
+
+      <label>Ukuran</label>
+      <select id="ukuran" required>
+        <option value="" disabled selected>Pilih ukuran</option>
+        <option value="60 x 160 cm">60 x 160 cm</option>
+        <option value="80 x 180 cm">80 x 180 cm</option>
+      </select>
+
+      <label>Bahan Banner</label>
+      <select id="bahan" required>
+        <option value="" disabled selected>Pilih bahan</option>
+        <option value="Flexi China 270 gr">Flexi China 270 gr</option>
+        <option value="Flexi Korea Glossy 440 gr">Flexi Korea Glossy 440 gr</option>
+        <option value="Flexi Korea Matte 440 gr">Flexi Korea Matte 440 gr</option>
+        <option value="Albatros">Albatros</option>
+        <option value="Luster">Luster</option>
+          </select>
+
+      <label>Pilihan Paket</label>
+      <select id="paket" required>
+        <option value="" disabled selected>Pilih paket</option>
+        <option value="Standing Alat + Banner / Poster">Standing Alat + Banner / Poster</option>
+        <option value="Standing Alat Aja">Standing Alat Aja</option>
+        <option value="Cetak Banner / Poster Aja">Cetak Banner / Poster Aja</option>
+      </select>
+
+      <label>Metode Print</label>
+      <select id="metode" required>
+        <option value="" disabled selected>Pilih metode</option>
+        <option value="Super High Resolution ( UV Print Roll to Roll )">Super High Resolution ( UV Print Roll to Roll ) Paling Unggul</option>
+        <option value="High Resolution ( Eco Solvent )">High Resolution ( Eco Solvent ) Lebih Hemat</option>
+        <option value="Beli Standing Alat Aja ( Tidak Print )">Beli Standing Alat Aja ( Tidak Print )</option>
+      </select>
+
+      <label>Warna Standing Alat</label>
+      <select id="warna" required>
+        <option value="" disabled selected>Pilih warna</option>
+        <option value="Hitam">Hitam</option>
+        <option value="Putih">Putih</option>
+        <option value="Cetak Aja (Tidak Pakai Alat)">Cetak Aja (Tidak Pakai Alat)</option>
+      </select>
+
+      <label>Jumlah Barang</label>
+      <input type="number" id="jumlah" min="1" required>
+
+      <label>Kapan Dibutuhkan?</label>
+      <input type="date" id="tanggal" required>
+
+      <label>Pada Jam Berapa?</label>
+      <input type="time" id="jam" required>
+
+      <label>Catatan Khusus untuk Admin Kami</label>
+      <textarea id="catatan" rows="4" placeholder="Contoh: Harus selesai hari H, tolong dikemas rapi, dll."></textarea>
+
+      <div class="note">
+        <b>Penting !</b>
+        Estimasi Dateline Yang Anda Atur Bisa Berubah Sesuai Kondisi Antrian, Anda Bisa Atur Negosiasi Waktu Dateline Dengan Admin Kami. <b>"Pastikan File Anda Ready / Siap Print"</b>
+      </div>
+
+      <button type="submit">Cek Harga ke Admin Metropolis Print</button>
+    </form>
+  </div>
+
+  <script>
+    function formatTanggalIndo(tanggalInput) {
+      const bulanIndo = ["Januari", "Februari", "Maret", "April", "Mei", "Juni",
+        "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+      const hariIndo = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+      const dateObj = new Date(tanggalInput);
+      const hari = hariIndo[dateObj.getDay()];
+      const tanggal = dateObj.getDate();
+      const bulan = bulanIndo[dateObj.getMonth()];
+      const tahun = dateObj.getFullYear();
+      return `${hari}, ${tanggal} ${bulan} ${tahun}`;
+    }
+
+    function sendToWhatsApp() {
+      const adminWa = "6282335222268";
+      const nama = document.getElementById("nama").value;
+      const nowa = document.getElementById("nowa").value;
+      const ukuran = document.getElementById("ukuran").value;
+      const bahan = document.getElementById("bahan").value;
+      const paket = document.getElementById("paket").value;
+      const metode = document.getElementById("metode").value;
+      const warna = document.getElementById("warna").value;
+      const jumlah = document.getElementById("jumlah").value;
+      const tanggalRaw = document.getElementById("tanggal").value;
+      const tanggal = formatTanggalIndo(tanggalRaw);
+      const jam = document.getElementById("jam").value;
+      const catatan = document.getElementById("catatan").value || "-";
+
+      const pesan =
+        `📌 Pemesanan Door Frame Banner\n\n` +
+        `👤 Nama: ${nama}\n` +
+        `📱 No. WA: ${nowa}\n` +
+        `📐 Ukuran: ${ukuran}\n` +
+        `📄 Bahan: ${bahan}\n` +
+        `📦 Paket: ${paket}\n` +
+        `🖨️ Metode Print: ${metode}\n` +
+        `🎨 Warna Alat: ${warna}\n` +
+        `🔢 Jumlah: ${jumlah} pcs\n` +
+        `🗓️ Hari Dateline: ${tanggal}\n` +
+        `⏰ Jam Dateline: ${jam}\n` +
+        `📝 Catatan: ${catatan}`;
+
+      const url = `https://wa.me/${adminWa}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
